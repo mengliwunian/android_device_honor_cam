@@ -1,4 +1,4 @@
-Copyright 2017 - The LineageOS Project
+Copyright 2017 - The LineageOS Project<br>
 Only used to Compile the Recovery For Honor5A（CAM-AL00）
 
 Device configuration for Honor 5A(_CAM_)
