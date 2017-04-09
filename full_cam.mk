@@ -12,11 +12,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-LOCAL_PATH := $(call my-dir)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-ifneq ($(filter cam,$(TARGET_DEVICE)),)
+# Inherit from kiwi device
+$(call inherit-product, device/honor/cam/device.mk)
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
-endif
+# Device identifier. This must come after all inclusions
+PRODUCT_NAME := full_cam
+PRODUCT_DEVICE := cam
+PRODUCT_BRAND := Honor
+PRODUCT_MANUFACTURER := HUAWEI
+PRODUCT_MODEL := Honor-5A

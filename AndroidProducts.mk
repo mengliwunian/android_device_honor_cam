@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_cam.mk
+    $(LOCAL_DIR)/full_cam.mk

@@ -12,11 +12,25 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-LOCAL_PATH := $(call my-dir)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-ifneq ($(filter cam,$(TARGET_DEVICE)),)
+$(call inherit-product-if-exists, vendor/honor/cam/cam-vendor.mk)
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := device/honor/cam/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
+# adb as root
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+
+
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)

@@ -1,9 +1,22 @@
+#
+# Copyright (C) 2017 The LineageOS Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 USE_camERA_STUB := true
 
 LOCAL_PATH := device/honor/cam
 
-# Assert
-# TARGET_OTA_ASSERT_DEVICE := 
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8952
@@ -32,6 +45,9 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 
 TARGET_BOOTLOADER_BOARD_NAME := cam,MSM8952
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := Honor5A,cam,CAM,CAM-AL00
 
 # Kernel
 TARGET_CUSTOM_KERNEL_HEADERS := device/honor/cam/include
@@ -86,3 +102,7 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Include tzdata for recovery
 PRODUCT_COPY_FILES += \
     bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+    
+
+# inherit from the proprietary version
+-include vendor/honor/cam/BoardConfigVendor.mk
