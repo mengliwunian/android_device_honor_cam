@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-USE_camERA_STUB := true
+USE_CAMERA_STUB := true
 
 LOCAL_PATH := device/honor/cam
 
