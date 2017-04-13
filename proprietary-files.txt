@@ -1404,45 +1404,16 @@ etc/firmware/venus.mdt
 
 # Wifi
 bin/cnss-daemon
-bin/cnss_diag
 etc/wifi/WCNSS_hw_wlan_nv.bin
-etc/wifi/WCNSS_hw_wlan_nv_can_al00.bin
-etc/wifi/WCNSS_hw_wlan_nv_can_al00_no_fem.bin
-etc/wifi/WCNSS_hw_wlan_nv_can_cl00.bin
-etc/wifi/WCNSS_hw_wlan_nv_can_l01.bin
-etc/wifi/WCNSS_hw_wlan_nv_can_l02.bin
-etc/wifi/WCNSS_hw_wlan_nv_can_l03.bin
-etc/wifi/WCNSS_hw_wlan_nv_can_tl00.bin
-etc/wifi/WCNSS_hw_wlan_nv_mla_al00.bin
-etc/wifi/WCNSS_hw_wlan_nv_mla_cl00.bin
-etc/wifi/WCNSS_hw_wlan_nv_mla_l01.bin
-etc/wifi/WCNSS_hw_wlan_nv_mla_l02.bin
-etc/wifi/WCNSS_hw_wlan_nv_mla_l03.bin
-etc/wifi/WCNSS_hw_wlan_nv_mla_tl00.bin
-
-
-# OTHER FIRMWARE
-
-# end not needed?
-etc/firmware/ale-HB3742A0EBC+_ATL_SCUD.fw
-etc/firmware/ale-HB3742A0EBC+_LS_LS.fw
-etc/firmware/ale-HB3742A0EBC+_SDI_SWD.fw
-etc/firmware/Alice_fw.bin
-etc/firmware/athena_boe_fw.img
-etc/firmware/athena_jdi_fw.img
-etc/firmware/ATH_miniBoot.bin
-etc/firmware/ATH_TBM_Latour2.bin
-etc/firmware/g620A_eely_fw.img
-etc/firmware/g620A_ofilm_fw.img
-etc/firmware/ice40.bin
-etc/firmware/kiw-HB396481EBC_ATL_SCUD.fw
-etc/firmware/kiw-HB396481EBC_SONY_SWD.fw
-etc/firmware/Kiwi_fw.bin
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
-etc/firmware/Rio_fw.bin
-etc/firmware/RIO_miniBoot.bin
-etc/firmware/RIO_TBM_Latour2.bin
-etc/firmware/T2A_fw.bin
-vendor/firmware/libpn547_fw.so
+etc/wifi/WCNSS_hw_wlan_nv_carmel_al00.bin
+etc/wifi/WCNSS_hw_wlan_nv_carmel_cl00.bin
+etc/wifi/WCNSS_hw_wlan_nv_carmel_l32.bin
+etc/wifi/WCNSS_hw_wlan_nv_venus.bin
+etc/wifi/WCNSS_hw_wlan_nv_venus_al00.bin
+etc/wifi/WCNSS_hw_wlan_nv_venus_cl00.bin
+etc/wifi/p2p_supplicant_overlay.conf
+etc/wifi/WCNSS_qcom_cfg.ini
+etc/wifi/WCNSS_qcom_sdio_cfg.ini
+etc/wifi/wpa_supplicant.conf
+etc/wifi/wpa_supplicant_overlay.conf
 
